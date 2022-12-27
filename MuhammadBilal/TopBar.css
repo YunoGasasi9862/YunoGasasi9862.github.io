@@ -1,0 +1,310 @@
+
+ul
+{
+    margin:0;
+    padding:0;
+}
+li
+{
+    margin:0;
+    padding:0;
+}
+
+.TopBar
+{
+  
+    background-color: rgb(27, 49, 97);
+    height:150px;
+    width:100%;
+    z-index:100;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+  
+    
+}
+.hanging-image
+{
+    position: fixed;
+}
+.hanging-image-css
+{
+    position: absolute;
+    object-fit: fill;
+    object-position: center;
+    width:100px;
+    height:100px;
+    left:75px;
+    top:72px;
+    animation-name: hanging-image;
+    animation-duration: 2s;
+   
+
+
+}
+
+@keyframes hanging-image{
+
+    from
+    {
+        transform: scale(0);
+        
+    }
+
+
+
+}
+
+.LogoSide
+{
+    width:250px;
+    flex-shrink: 0;
+   
+}
+
+.OtherSide
+{
+    width:1000px;
+}
+.logo
+{
+    object-fit: cover;
+    object-position: center;
+    width:250px;
+    height:180px;
+
+    
+}
+.TOPLIST
+{
+ 
+    display: flex;
+    list-style: none;
+    
+    justify-content: space-around;
+    align-items: center;
+
+ 
+}
+.TOPLIST li a
+{
+    text-decoration: none;
+    color:white;
+}
+.TOPLIST li ul{
+    list-style: none;
+}
+.firstListdiv
+{
+    display:flex;
+   
+    position: relative;
+  
+
+}
+
+.firstListdiv:hover .Arrow
+{
+    transform: rotateZ(90deg);
+}
+
+
+.Arrow
+{
+    color:white;
+    position: absolute;
+    left:60px;
+    top:-2px;
+    transition: transform 1s;
+    cursor: pointer;
+
+}
+.insideList
+{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;  
+     position: absolute;
+    background-color: white;
+    height:120px;
+    top:30px;
+    border-radius: 20px;
+    transition: visibility .2s ease-in;
+    display:inline-block;
+
+
+}
+
+.firstListdiv:hover .insideList 
+{
+   visibility: visible;
+  
+}
+.firstListdiv .insideList
+{
+    align-items: center;
+}
+.insideList li{
+    align-items: center;
+    padding:20px;
+   
+}
+.insideList li:hover a
+{
+    color: rgb(71, 187, 216);
+
+}
+
+.insideList li:hover
+{
+    visibility: visible;
+   
+}
+
+.secondlist a
+{
+    color:white;
+    transition: color 1s;
+}
+.secondlist:hover a
+{
+    color:rgb(0, 0, 0);
+}
+.insideList li a{
+    color:black;
+
+}
+
+.navBar
+{
+    display:none;
+}
+
+@keyframes appear
+{
+    from 
+    {
+        opacity: 0;
+    }
+
+    to 
+    {
+       
+        opacity: 1;
+    }
+
+}
+.sideFloating
+{
+    background-color: rgb(27, 49, 97);
+    position: fixed;
+    z-index:200;
+    width:150px;
+    display:none;
+}
+
+@media (min-width:0px) and (max-width:800px)
+{
+    .OtherSide
+    {
+        display:none;
+    }
+
+    .navBar{
+       display:block;
+       width:50px;
+       height:50px;
+       display: flex;
+       flex-direction: column;
+   
+       
+
+    }
+
+       
+
+    .LogoSide
+    {
+        width:200px;
+        height:100px;
+    }
+    .logo{
+        width:200px;
+        height:100px;
+    }
+
+    .hanging-image-css
+    {
+        width:70px;
+        height:70px;
+        left:120px;
+        object-fit: fill;
+        object-position: center;
+    }
+
+ 
+    #navbar1
+    {
+          position: absolute;
+          top:20px;
+          width:20px;
+          height:3px;
+          background-color: white;
+          margin-left:10px;
+          z-index: 300;
+          cursor: pointer;
+    }
+    #navbar2
+    {
+        position: absolute;
+        top:25px;
+        width:16px;
+        height:3px;
+        background-color: white;
+        margin-left:10px;
+        z-index: 300;
+        cursor: pointer;
+    
+    }
+    #navbar3
+    {
+        position: absolute;
+        top:29.3px;
+        width:12px;
+        height:3.5px;
+        background-color: white;
+        margin-left:10px;
+        z-index: 300;
+        cursor: pointer;
+    }
+    .backgroundetails 
+    {
+       visibility:hidden;
+    }
+
+    
+    .TopBar
+    {
+        justify-content: flex-end;
+    }
+
+    .sideFloating
+    {
+        color:white;
+        text-align: center;
+
+       
+    }
+
+    .sideFloating div
+    {
+        margin-top:10px;
+        padding:5px;
+        cursor: pointer;
+    }
+  
+
+}
