@@ -26,6 +26,12 @@ $("#navBar").click(function()
 GenerateFloating();
 
 
+$(".sideFloating > div").hover(function()
+{
+
+    
+})
+
 });
 
 function GenerateFloating()

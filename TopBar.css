@@ -206,6 +206,8 @@ li
     display:none;
 }
 
+
+
 @media (min-width:0px) and (max-width:800px)
 {
     .OtherSide
@@ -294,16 +296,32 @@ li
     .sideFloating
     {
         color:white;
-        text-align: center;
+        
 
        
     }
 
     .sideFloating div
     {
-        margin-top:10px;
-        padding:5px;
+        
+        margin-top:15px;
         cursor: pointer;
+        display:flex;
+
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left:3px;
+
+    }
+
+    .line
+    {
+      height:2px;
+        width:0;
+      margin-right:20px;
+      background-color: white;
+      visibility: hidden;
     }
   
 
