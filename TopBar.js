@@ -2,7 +2,9 @@
 
 
 $(function(){
-
+    var width=0;
+    var MaxWidth=0;
+    var Highlight;
 $(window).resize(function()  //all i had to do was use this. Use $(window) tag :)
 {
     GenerateFloating();
@@ -28,9 +30,28 @@ GenerateFloating();
 
 $(".sideFloating > div").hover(function()
 {
+    Highlight =$(this).children()[0]; //first children
+     
+    timer=setInterval(function()
+    {
+            MaxWidth=$(".sideFloating > div").width();
+            MaxWidth=MaxWidth-10;
+            if(width<=MaxWidth)
+            {
+                width+=2;
 
-    
-})
+            }
+            $(Highlight).css("width", width);
+  
+    },10);
+},function()
+{
+    width=0;
+    $(Highlight).css("width", width);
+
+    clearInterval(timer);
+
+});
 
 });
 

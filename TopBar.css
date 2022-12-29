@@ -13,7 +13,7 @@ li
 .TopBar
 {
   
-    background-color: rgb(27, 49, 97);
+    background-color: rgb(33, 45, 71);
     height:150px;
     width:100%;
     z-index:100;
@@ -199,7 +199,8 @@ li
 }
 .sideFloating
 {
-    background-color: rgb(27, 49, 97);
+    background-color: rgb(33, 45, 71);
+
     position: fixed;
     z-index:200;
     width:150px;
@@ -315,13 +316,13 @@ li
 
     }
 
-    .line
+    .line0, .line1, .line2, .line3, .line4
     {
       height:2px;
-        width:0;
+        width:0px;
       margin-right:20px;
       background-color: white;
-      visibility: hidden;
+     
     }
   
 
