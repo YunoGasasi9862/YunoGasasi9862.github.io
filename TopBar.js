@@ -13,14 +13,14 @@ $(window).resize(function()  //all i had to do was use this. Use $(window) tag :
 
 $("#navbar1, #navbar2, #navbar3").hover(function()  //if hover execute the first one, otherwise the second one
 {
-    $(this).css("background-color", "red");  //the first hover condition
+    $(this).css("background-color", "rgb(51, 83, 151)");  //the first hover condition
 
 }, function()
 {
       $(this).css("background-color", "white");  //iif not hover
 });
 
-$("#navBar").click(function()
+$("#navbar1, #navbar2, #navbar3").click(function()
 {
    $(".sideFloating").toggle();  //THIS IS WOW! it toggles between hide nad show
 });
@@ -30,8 +30,8 @@ GenerateFloating();
 
 $(".sideFloating > div").hover(function()
 {
-    Highlight =$(this).children()[0]; //first children
-     
+    Highlight =$(this).children()[1]; //first children
+    $(this).css("background", "rgb(51, 83, 151)");
     timer=setInterval(function()
     {
             MaxWidth=$(".sideFloating > div").width();
@@ -48,7 +48,7 @@ $(".sideFloating > div").hover(function()
 {
     width=0;
     $(Highlight).css("width", width);
-
+    $(this).css("background", "rgb(33, 45, 71)");
     clearInterval(timer);
 
 });

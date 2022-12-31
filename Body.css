@@ -322,8 +322,17 @@ body{
 {
     .backgroundetails
     {
-        width:800px;
+        width:600px;
+        position: relative;
+        left:20%;
+        flex-direction: column;
     }
+
+    .description-left
+    {
+       
+    }
+
 
    
 }
