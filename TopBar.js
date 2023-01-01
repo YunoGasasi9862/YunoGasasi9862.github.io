@@ -2,9 +2,21 @@
 
 
 $(function(){
+
+
+
     var width=0;
     var MaxWidth=0;
     var Highlight;
+
+    if(window.matchMedia("(max-width: 799px)").matches)
+    {
+       var width= Number($(".sidefloating").width());
+       $(".backgroundetails").css("left", width+10).width(600);
+       
+
+    }
+
 $(window).resize(function()  //all i had to do was use this. Use $(window) tag :)
 {
     GenerateFloating();
@@ -52,6 +64,8 @@ $(".sideFloating > div").hover(function()
     clearInterval(timer);
 
 });
+
+   
 
 });
 

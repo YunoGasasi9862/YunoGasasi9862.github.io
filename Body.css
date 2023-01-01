@@ -322,16 +322,36 @@ body{
 {
     .backgroundetails
     {
-        width:600px;
+        width:300px;
         position: relative;
-        left:20%;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:200px;
+        background-color: #ffffff00;
     }
 
     .description-left
     {
        
     }
+
+    .pp, .profile-image{
+        width:150px;
+        height:150px;
+    }
+    .socialbar{
+     
+        width:150px;
+
+        }
+    .profile-image
+    {
+        position: relative;
+        top:100px;
+    }
+
+    
 
 
    
