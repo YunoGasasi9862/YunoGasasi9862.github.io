@@ -9,18 +9,50 @@ $(function(){
     var MaxWidth=0;
     var Highlight;
 
-    if(window.matchMedia("(max-width: 799px)").matches)
+    window.matchMedia("(max-width: 799px)").addEventListener('change', event =>
+  
     {
-       var width= Number($(".sidefloating").width());
-       $(".backgroundetails").css("left", width+10).width(600);
+
+        if(event.matches)
+        {
+            var width= Number($(".sidefloating").width());
+            $(".backgroundetails").css("left", width+10).width(600);
+        }else{
+
+            $(".backgroundetails").css("left", 0).css("width", "100%");
+        }
+      
+    
+    });
+
+    if(window.matchMedia("(max-width: 799px)").matches)
+  
+    {
+
+       
+            var width= Number($(".sidefloating").width());
+            $(".backgroundetails").css("left", width+10).width(600);
        
 
+       
+      
+    
     }
+       
+   
+  
+   
+
+    
+    
 
 $(window).resize(function()  //all i had to do was use this. Use $(window) tag :)
 {
     GenerateFloating();
+    
 
+
+   
 })
 
 $("#navbar1, #navbar2, #navbar3").hover(function()  //if hover execute the first one, otherwise the second one

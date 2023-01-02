@@ -322,7 +322,6 @@ body{
 {
     .backgroundetails
     {
-        width:300px;
         position: relative;
         flex-direction: column;
         justify-content: center;
@@ -331,10 +330,7 @@ body{
         background-color: #ffffff00;
     }
 
-    .description-left
-    {
-       
-    }
+ 
 
     .pp, .profile-image{
         width:150px;
