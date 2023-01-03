@@ -20,6 +20,7 @@ $(function(){
         }else{
 
             $(".backgroundetails").css("left", 0).css("width", "100%");
+            $(".sideFloating").css("display", "none");
         }
       
     

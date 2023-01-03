@@ -3,7 +3,7 @@ body{
     font-family: Combo;
     background-color: rgb(231, 230, 230);
     overflow-x: hidden;
- 
+    overflow-y: hidden;
 }
 .Background-Image
 {
