@@ -9,37 +9,7 @@ $(function(){
     var MaxWidth=0;
     var Highlight;
 
-    window.matchMedia("(max-width: 799px)").addEventListener('change', event =>
   
-    {
-
-        if(event.matches)
-        {
-            var width= Number($(".sidefloating").width());
-            $(".backgroundetails").css("left", width+10).width(600);
-        }else{
-
-            $(".backgroundetails").css("left", 0).css("width", "100%");
-            $(".sideFloating").css("display", "none");
-        }
-      
-    
-    });
-
-    if(window.matchMedia("(max-width: 799px)").matches)
-  
-    {
-
-       
-            var width= Number($(".sidefloating").width());
-            $(".backgroundetails").css("left", width+10).width(600);
-       
-
-       
-      
-    
-    }
-       
    
   
    
