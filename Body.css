@@ -16,70 +16,8 @@ body{
     right:0;
 }
 
-.image
-{
-    height:50px;
-    width:50px;
-    object-fit: contain;
-    object-position: center;
-    position: absolute;
-    z-index: -100;
-    top:1000px;
-    animation-name:background-move;
-    animation-duration: 4s;
-    animation-fill-mode: both;
-    animation-timing-function: ease;
-}
-
-.image2{
-    height:50px;
-    width:50px;
-    object-fit: contain;
-    object-position: center;
-    position: absolute;
-    z-index: -100;
-    top:1000px;
-    animation-name:background-move2;
-    animation-duration: 4s;
-    animation-fill-mode: both;
-    animation-timing-function: ease;
-}
 
 
-@keyframes background-move
-{
-    from
-    {
-        top:700px;
-        right:100px;
-        transform: rotateZ(20deg);
-    }
-
-    to 
-    {
-        top:-10px;
-        right:1000px;
-        transform: rotateZ(1000deg);
-    }
-}
-
-@keyframes background-move2
-{
-    from
-    {
-        top:700px;
-        left:100px;
-        transform: rotateZ(-20deg);
-    }
-
-    to 
-    {
-        top:-10px;
-        left:1000px;
-        transform: rotateZ(-1000deg);
-
-    }
-}
 
 .backgroundetails
 {
@@ -346,11 +284,7 @@ body{
     }
 
     
-    .image, .image2{
-        display: none;
-
-    }
-
+    
    
 }
 
@@ -362,10 +296,7 @@ body{
         position:absolute;
         left:0;
     }
-    .image, .image2{
-        display: none;
 
-    }
     
 }
 
