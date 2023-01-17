@@ -1,6 +1,7 @@
 body{
     margin:0;
     font-family: Combo;
+    box-sizing: border-box;
     background-color: rgb(231, 230, 230);
     overflow-x: hidden;
     overflow-y: hidden;
@@ -357,6 +358,10 @@ body{
         font-size:12px;
         position:absolute;
         left:0;
+    }
+    .image, .image2{
+        display: none;
+
     }
     
 }
