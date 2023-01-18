@@ -6,6 +6,6 @@ $(function()
     $(".copyright").css("top", newHeight);
     $(".footer-box").css("top", newHeight-$(".footer-box").height());
 
-
+   
     
 })

@@ -6,7 +6,25 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
 }
-
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 .wrapper
 {
     position: sticky;
@@ -30,8 +48,8 @@ body{
 
     position: relative;
     height:38vh;
-    top:8vh;
-        animation-name:popup;
+    top:12vh;
+    animation-name:popup;
     animation-duration: 3s;
     display:flex;
     justify-content: space-between;
@@ -245,7 +263,7 @@ body{
     to 
     {
         opacity:1;
-        top:8vh;
+        top:12vh;
     }
 }
 @keyframes size-up
@@ -264,18 +282,15 @@ body{
     {
         position: relative;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height:200px;
+        justify-content:center;
+        align-items:center;
+        height:12vh;
+        top:3vh;
+        animation: none;
         background-color: #ffffff00;
     }
 
-    .description-left
-    {
-
-    }
-
- 
+    
 
     .pp, .profile-image{
         width:150px;
@@ -288,10 +303,20 @@ body{
         }
     .profile-image
     {
-        position: relative;
-        top:100px;
+        position: absolute;
+        top: 19vh;
     }
 
+    .button
+    {
+        display:none;
+    }
+    .below{
+        height:17vh;
+        overflow-y: scroll;
+        box-shadow: 0 8px 10px rgba(19, 19, 19, 0.2);
+
+    }
     
     
    
@@ -299,7 +324,36 @@ body{
 
 @media screen and (max-width:500px) {
 
+    .backgroundetails
+    {
+        position: relative;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        top:-9vh;
+        animation: none;
+        background-color: #ffffff00;
+    }
+
+    
+
    
+    .profile-image
+    {
+        position: absolute;
+        top: 20vh;
+    }
+
+    .button
+    {
+        display:none;
+    }
+    .below{
+        height:18vh;
+        overflow-y: scroll;
+        box-shadow: 0 8px 10px rgba(19, 19, 19, 0.2);
+
+    }
 
     
 }
