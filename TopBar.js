@@ -43,13 +43,13 @@ $("#navbar1, #navbar2, #navbar3").click(function()
 GenerateFloating();
 
 
-$(".sideFloating > div").hover(function()
+$(".sideFloating > a > div").hover(function()
 {
     Highlight =$(this).children()[1]; //first children
     $(this).css("background", "rgb(51, 83, 151)");
     timer=setInterval(function()
     {
-            MaxWidth=$(".sideFloating > div").width();
+            MaxWidth=$(".sideFloating > a > div").width();
             MaxWidth=MaxWidth-10;
             if(width<=MaxWidth)
             {

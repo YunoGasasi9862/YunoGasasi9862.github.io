@@ -203,9 +203,14 @@ li
 
     position: fixed;
     z-index:200;
-    width:150px;
+    width:100%;
     display:none;
    
+}
+
+div > a{
+    text-decoration: none;
+    color:white
 }
 
 

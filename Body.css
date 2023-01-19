@@ -330,7 +330,7 @@ body{
         flex-direction: column;
         justify-content:center;
         align-items:center;
-        top:-9vh;
+        top:-6vh;
         animation: none;
         background-color: #ffffff00;
     }
