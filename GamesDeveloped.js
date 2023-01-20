@@ -3,6 +3,15 @@ var StringLoc="";
 var TextArray=["Kiwi Eater", "Angry Fish", "Box Runner", "Color Switch Clone", "Fighter Planes"]
 var LinkArray=["https://github.com/YunoGasasi9862/2DPlatformer", "https://github.com/YunoGasasi9862/AngryBirdsSelf",
  "https://github.com/YunoGasasi9862?tab=repositories", "https://github.com/YunoGasasi9862/Color-Changer","https://github.com/YunoGasasi9862?tab=repositories"];
+
+ $(function(){
+
+  
+     $("body").height(window.innerHeight);
+    
+     
+     
+})
 function ChangePicture()
 {
  
@@ -95,5 +104,3 @@ function ChangePictureLeft()
     elements1[0].src= StringLoc;
 
 }
-
-

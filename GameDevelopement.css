@@ -1,10 +1,14 @@
 body{
 
     margin:0;
- 
+    font-family: Combo;
+    box-sizing: border-box;
+    background-color: rgb(231, 230, 230);
+    overflow-x: hidden;
+    overflow-y: hidden;  margin:0;
     overflow-x: hidden;
 }
-.wrapper2
+.wrapper
 {
     position: sticky;
     top:0;
@@ -15,6 +19,7 @@ body{
     background-size: cover;
     width:100%;
     height:100%;
+   
 }
 
 
@@ -22,10 +27,9 @@ body{
 {
     position: relative;
     display: flex;
-    position: absolute;
     width:100%;
     Height:300px;
-    top:25vh;
+    top:4vh;
     justify-content: center;
     align-items: center;
     animation-name: slowlyappear;
@@ -99,14 +103,13 @@ body{
 
 {
     width:100%;
-    height:250px;
+    height:30vh;
     z-index:100px;
     position: relative;
-    top:200px;
+    top:7vh;
     box-shadow: 0px 0px 10px 15px rgba(0,0,0,0.4);
     animation-name: shrink;
     animation-duration: 3s;
-    position: relative;
 
 }
 .Text
@@ -141,12 +144,35 @@ body{
    
 }
 
-@media (min-width:0px) and (max-width:800px)
+@media (min-width:0px) and (max-width:600px)
 {
-     .Text
-     {
-        width:800px;
-     }
+    .gameDescription
+    {
+        font-size:12px;
+    }
+
+    .Text
+    {
+        font-size:14px;
+    }
+
+   .FP
+   {
+    width:60%;
+   }
+   .first-Picture
+   {
+    width:60%;
+   }
+
+   .SlideShow
+   {
+    width:80%;
+    height:200px;
+    text-align: center;
+    left:10%;
+   }
+    
 
 }
 
