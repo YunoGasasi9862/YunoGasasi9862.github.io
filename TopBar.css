@@ -200,7 +200,6 @@ li
 .sideFloating
 {
     background-color: rgb(33, 45, 71);
-
     position: fixed;
     z-index:200;
     width:100%;
@@ -304,13 +303,12 @@ li
        
     }
 
-    .sideFloating div
+    .sideFloating > a div
     {
         
         margin-top:15px;
         cursor: pointer;
         display:flex;
-
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
