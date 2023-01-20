@@ -96,6 +96,7 @@ body{
 
 }
 .gameDescription
+
 {
     width:100%;
     height:250px;
@@ -147,11 +148,6 @@ body{
         width:800px;
      }
 
-     .SlideShow
-     {
-        
-       
-     }
 }
 
 @keyframes shrink
