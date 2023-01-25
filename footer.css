@@ -11,7 +11,7 @@
     width:100%;
     height:150px;
     background-color: white;
-
+    bottom:2%;
     animation-name: delayappear;
     animation-duration: 3s;
     animation-fill-mode: both;
