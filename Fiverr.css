@@ -304,13 +304,14 @@
 
    .descrip
    {
-    top:350px;
-     height:200px;
+     top:7vh;
+ 
+     height:20vh;
    }
    
    .fiverr-description
    {
-    top:180px;
+    top:3vh;
 
    
    }
@@ -326,6 +327,7 @@
    }
    .descrip p:first-of-type
    {
+    overflow-y:scroll;
     font-size: 12px;
    }
 
@@ -372,5 +374,8 @@
     font-size:9px;
    }
  
+    
+
+
 }
 
