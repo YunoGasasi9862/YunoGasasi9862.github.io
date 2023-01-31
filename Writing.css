@@ -4,7 +4,7 @@
     flex-basis: 100%;
     height:550px;
     position: relative;
-    top: 200px;
+    top: 4vh;
     flex-direction: column;
     box-shadow: 30px 10px 50px 5px;
 
@@ -35,6 +35,7 @@
     line-height: 1.5;
     font-size: 17px;
     padding:15px;
+ 
 
 }
 .WattpadLink
@@ -105,13 +106,27 @@
 }
 @media (min-width:0px) and (max-width:800px)
 {
-    .content
+   
+    .SampleBox
+{
+    display: flex;
+    flex-basis: 100%;
+    height:400px;
+    position: relative;
+    top: 4vh;
+    flex-direction: column;
+    box-shadow: 30px 10px 50px 5px;
+
+}
+    .Wattpad
     {
-        width:799px;
+        overflow-y: scroll;
+
+    }
+    .WattpadLink
+    {
+        top:50vh;
     }
     
-    .heading
-    {
-        width:799px;
-    }
+   
 }
