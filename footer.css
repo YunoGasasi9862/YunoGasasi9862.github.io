@@ -83,7 +83,7 @@
 .Copyright
 {
     width:100%;
-    height:20px;
+    height:15px;
     position: absolute;
     background-color: black;
     display: flex;
@@ -92,7 +92,7 @@
     animation-name: delayappear;
     animation-duration: 4s;
     animation-fill-mode: both;
-    bottom:0px;
+    bottom:0%;
     
     
 }
@@ -133,10 +133,46 @@
    .footer-box
    {
     bottom:1%;
+    height:18vh;
+   }
+
+   .contact-details
+   {
+    width:320px;
+    
+   }
+   .contact-details > div img
+   {
+        width:3vh;
+        height:3vh;
+        object-fit: cover;
+        object-position: center;
+   }
+  
+   .contact-details > div 
+   {
+    width:18vh;
+   }
+   .address-txt, .phone-txt, .email-txt
+   {
+    font-size:7px;
+   }
+   .footer-logo
+   {
+    width:15vh;
     height:15vh;
    }
    
-  
+   .address:hover img, .phone:hover img, .email:hover img
+   {
+     width:20px;
+   }
+   
+   .address-txt:hover, .phone-txt:hover, .email-txt:hover
+   {
+       font-size: 8px;
+   }
+
    
 
 }
