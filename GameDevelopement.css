@@ -150,6 +150,7 @@ body{
     .gameDescription
     {
         font-size:12px;
+        overflow-y: scroll;
     }
 
     .Text
