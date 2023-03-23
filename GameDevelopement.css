@@ -160,7 +160,12 @@ body{
 
    .FP
    {
-    width:60%;
+    width:100%;
+   }
+   video.FP
+   {
+      height:70%;
+      width:100%;
    }
    .first-Picture
    {
