@@ -61,7 +61,7 @@
 .address-txt, .phone-txt, .email-txt
 {
     font-size: 10px;
-
+    color: black;
     padding-left:15px;
     cursor:pointer;
     transition: font-size .4s;
