@@ -55,7 +55,7 @@
 }
 
 .WattpadLink:hover {
-  width: 150px;
+  width: 70px;
   cursor: pointer;
   background: linear-gradient(45deg, #ff9a2e, #ff7e00);
 }
