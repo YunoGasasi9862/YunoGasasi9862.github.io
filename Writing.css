@@ -1,132 +1,102 @@
-.SampleBox
-{
-    display: flex;
-    flex-basis: 100%;
-    height:550px;
-    position: relative;
-    top: 4vh;
-    flex-direction: column;
-    box-shadow: 30px 10px 50px 5px;
-
+.SampleBox {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  position: relative;
+  top: 4vh;
+  height: 550px;
+  background: rgba(33, 45, 71, 0.85);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.heading
-{
-    text-align: center;
-    color:rgb(255, 255, 255);
-    font-weight: bold;
-    word-spacing: 3px;
-
-
-}
-.Wattpad > span
-{
-    font-style: italic;
-    word-spacing: 2px;
-    color:white;
-    line-height: 1.5;
-    font-size: 17px;
-    padding:15px;
-}
-.content
-{
-    word-spacing: 2px;
-    color:white;
-    line-height: 1.5;
-    font-size: 17px;
-    padding:15px;
- 
-
-}
-.WattpadLink
-{
-    position: absolute;
-    bottom:20px;
-     width:50px;
-     height:50px;
-     right:45%;
-     left:45%;
-     border-radius: 50px;
-     border-style: none;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     transition: padding .5s;
-
-}
-.WattpadLink:hover
-{
-    padding-right:110px;
-    cursor: pointer;
-}
-.wattpadimage
-{
-    object-fit:cover;
-    object-position: center;
-    width:30px;
-    padding-left:4px;
-
-}
-.Name
-{
-  
-    color:orange;
-    padding-left:7px;
-    font-weight: 400;
-    font-size:14px;
-
-    visibility: hidden;
-    opacity:0;
-    
+.heading {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  word-spacing: 3px;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
-.WattpadLink:hover .Name
-{
-    animation-name: showup;
-    animation-duration: .8s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+.Wattpad > span {
+  font-style: italic;
+  word-spacing: 2px;
+  color: #f0f0f0;
+  line-height: 1.6;
+  font-size: 17px;
+  padding: 15px;
+}
+
+.content {
+  word-spacing: 2px;
+  color: #ddd;
+  line-height: 1.6;
+  font-size: 17px;
+  padding: 15px;
+}
+
+.WattpadLink {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: #ff7e00;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: width 0.5s ease, background 0.3s ease;
+  overflow: hidden;
+}
+
+.WattpadLink:hover {
+  width: 150px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff9a2e, #ff7e00);
+}
+
+.wattpadimage {
+  width: 28px;
+  margin-left: 8px;
+  object-fit: cover;
+}
+
+.Name {
+  color: #fff;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.WattpadLink:hover .Name {
+  animation: showup 0.6s ease forwards;
 }
 
 @keyframes showup {
-    
-    from
-    {
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    to
-    {
-
-        visibility: visible;
-        opacity:1;
-    }
-
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
-@media (min-width:0px) and (max-width:800px)
-{
-   
-    .SampleBox
-{
-    display: flex;
-    flex-basis: 100%;
-    height:400px;
-    position: relative;
-    top: 4vh;
-    flex-direction: column;
-    box-shadow: 30px 10px 50px 5px;
 
-}
-    .Wattpad
-    {
-        overflow-y: scroll;
+/* Mobile adjustments */
+@media (max-width: 800px) {
+  .SampleBox {
+    height: 400px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
 
-    }
-    .WattpadLink
-    {
-        top:50vh;
-    }
-    
-   
+  .Wattpad {
+    overflow-y: scroll;
+  }
+
+  .WattpadLink {
+    bottom: 10px;
+  }
 }
