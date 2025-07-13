@@ -1,381 +1,252 @@
-*
-{
-    margin:0;
-    padding:0;
-}
-.wrapper
-{
-    position: sticky;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background-image: url("/beautiful-milky-way-night-sky.jpg");
-    background-size: cover;
-    width:100%;
-    height:100%;
-   
-}
-.FMain
-{
-    position: relative;
-}
-.middleImage
-{
-   position: relative;
-   top:3vh;
-    width:80px;
-    height:80px;
-    margin:0 auto;
-    text-align: center;
-    background-color: white;
-    border-radius: 100px;
-    box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.9);
-    transform-origin: center;
- 
-
-}
-.middleImageBlock
-{
-    width:100%;
-   
-    height:80px;
-    text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.middleImage:hover
-{
-    cursor: pointer;
-    box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.9);
-    transform-origin: center;
-
-}
-.middleImage:hover img
-{
-    transform: rotateZ(360deg);
-
+.wrapper {
+  position: sticky;
+  top: 0;
+  background: url("/beautiful-milky-way-night-sky.jpg") center/cover no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
-.middleImage > img
-{
-
-    width:80px;
-    height:80px;
-    object-fit: cover;
-    object-position: center;
-    transition: transform .7s;
-    transform-origin: center;
-
-}
-.fiverr-description
-
-{
-
-    position: relative;
-    top:5vh;
-    border:3px dashed rgb(255, 255, 255);
-    border-right-style: none;
-    border-left-style: none;
-    padding: 15px 0px;
-    justify-content: center;
-    
-    display:flex;
-   margin: 0 auto;
-   box-shadow: 0px 0px 10px 10px rgba(5, 5, 5, 0.7);
-   cursor: pointer;
-   align-items: center;
-
-    
-  
-    
-}
-.fiverr-description p
-{
-    color:white;
-    font-size:18px;
-   
+/* Main layout */
+.FMain {
+  position: relative;
 }
 
-.fiverr-description i
-{
-   
-    padding-right:20px;
-    padding-left:20px;
-    color: rgb(182, 181, 108);
-}
-.fiverr-description:hover i
-{
-    
-    animation-name: twinkle;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-}
-.descrip
-{
-    width:100%;
-
-    height:25vh;
-    position: relative;
-    top:9vh;
-    margin:0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 0px 10px 10px rgba(5, 5, 5, 0.7);
-    padding-bottom: 20px;
-}
-.footer-box
-
-{
-   bottom:2%;
+/* Middle Image */
+.middleImageBlock {
+  width: 100%;
+  height: 80px;
+  text-align: center;
 }
 
-.descrip p:first-of-type
-{
-    text-align: center;
-    color:white;
-    margin: 10px auto;
-    padding-right:10px;
-    padding-left:10px;
-    line-height: 1.5;
-    font-size: 17px;
-   
-}
-.FiverrBTN
-{
-    background-color: rgb(255, 255, 255);
-    height:40px;
-    width:40px;
-    display: flex;
-    border-radius: 40px;
-    justify-content: center;
-    align-items: center;
-    transition: ease all .5s;
-    position: relative;
-    
-}
-.FiverrBTN > img
-{
-    width:20px;
-    object-fit: contain;
-    object-position: center;
-    padding-right:2px;
-
+.middleImage {
+  position: relative;
+  top: 3vh;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  transition: box-shadow 0.3s ease;
 }
 
-.FiverrBTN a
-{
-    position: absolute;
-     visibility: hidden;
-     opacity: 0;
-     text-decoration: none;
-     color:white;
-}
-.FiverrBTN:hover > a
-{
-    visibility: visible;
-    left:42px;
-    transition:ease all 2s;
-    opacity:1;
-    
-
-}
-.FiverrBTN:hover 
-{
-     padding-right:50px;
-     animation-name: colorchange;
-     animation-duration:2s;
-     animation-fill-mode: both;
-     animation-iteration-count: infinite;
-     cursor:pointer;
-}
-.FiverrBTN:hover p
-{
-    font-size: 14px;
+.middleImage:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8);
 }
 
-@keyframes twinkle
-{
-    from
-    {
-       color:rgb(158, 65, 65);
-       transform: translateX(0px);
-    }
-
-    20%
-    {
-        color:rgb(47, 165, 83);
-        transform: translateX(-10px);
-
-    }
-
-    40%
-    {
-        color:rgb(47, 132, 165);
-        transform: translateX(10px);
-
-    }
-    60%
-    {
-        color:rgb(118, 182, 34);
-        transform: translateX(-10px);
-
-    }
-    80%
-    {
-        color:rgb(212, 21, 79);
-        transform: translateX(10px);
-
-    }
-    to
-    {
-        color: rgb(26, 148, 156);
-
-    }
+.middleImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  transition: transform 0.8s ease;
 }
 
-@keyframes colorchange
-{
-   
-    from
-    {
-        background-color: rgb(26, 148, 156);
-    }
-
-    20%
-    {
-        background-color:rgb(87, 197, 120);
-
-    }
-
-    40%
-    {
-        background-color:rgb(84, 152, 179);
-
-    }
-    60%
-    {
-        background-color:rgb(154, 206, 86);
-
-    }
-    80%
-    {
-        background-color:rgb(197, 67, 106);
-
-    }
-    to
-    {
-        background-color: rgb(26, 148, 156);
-
-    }
+.middleImage:hover img {
+  transform: rotateZ(360deg);
 }
 
-@media (min-width:0px) and (max-width:500px)
-{
-   .TopBar
-   {
+/* Fiverr description */
+.fiverr-description {
+  position: relative;
+  top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  margin: 0 auto;
+  border-top: 2px dashed #fff;
+  border-bottom: 2px dashed #fff;
+  background: rgba(33, 45, 71, 0.8);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
 
-      justify-content: flex-start;
-      margin:0 auto;
-      align-items: center;
-      text-align: center;
-   }
-   .LogoSide
-   {
-    width:150px;
-    align-items: center;
-   }
-   .logo
-   {
-    width:150px;
-    height: 150px;
-   }
+.fiverr-description:hover {
+  background: rgba(33, 45, 71, 0.95);
+}
 
-   .middleImage
-   {
-    display:inline-block;
-    margin:0 auto;
-   
-   
-   }
+.fiverr-description p {
+  color: #f1f1f1;
+  font-size: 17px;
+}
 
-   .descrip
-   {
-     top:7vh;
- 
-     height:20vh;
-   }
-   
-   .fiverr-description
-   {
-    top:3vh;
+.fiverr-description i {
+  padding: 0 16px;
+  color: rgb(182, 181, 108);
+  transition: color 0.5s ease;
+}
 
-   
-   }
+.fiverr-description:hover i {
+  animation: twinkle 1s linear infinite;
+}
 
-   .fiverr-description p
-   {
-     font-size:12px;
-   }
-   .FiverrBTN
-   {
-    margin-bottom:50px;
-    
-   }
-   .descrip p:first-of-type
-   {
-    overflow-y:scroll;
+/* Description block */
+.descrip {
+  position: relative;
+  top: 9vh;
+  margin: 0 auto;
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(33, 45, 71, 0.85);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  padding: 15px 10px 20px;
+  border-radius: 10px;
+}
+
+.descrip p:first-of-type {
+  text-align: center;
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 0 10px;
+  overflow-y: auto;
+}
+
+/* Fiverr button */
+.FiverrBTN {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.FiverrBTN img {
+  width: 20px;
+  object-fit: contain;
+}
+
+.FiverrBTN a {
+  position: absolute;
+  left: 50px;
+  opacity: 0;
+  visibility: hidden;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: opacity 0.6s ease, left 0.6s ease;
+}
+
+.FiverrBTN:hover {
+  width: 110px;
+  background: linear-gradient(45deg, #66df41, #3ad10c);
+  cursor: pointer;
+  animation: colorchange 2s infinite;
+}
+
+.FiverrBTN:hover a {
+  visibility: visible;
+  opacity: 1;
+  left: 45px;
+}
+
+.FiverrBTN:hover img {
+  margin-right: 8px;
+}
+
+/* Animations */
+@keyframes twinkle {
+  0% { color: #9e4141; transform: translateX(0); }
+  20% { color: #2fa553; transform: translateX(-6px); }
+  40% { color: #2f84a5; transform: translateX(6px); }
+  60% { color: #76b622; transform: translateX(-6px); }
+  80% { color: #d4154f; transform: translateX(6px); }
+  100% { color: #1a949c; transform: translateX(0); }
+}
+
+@keyframes colorchange {
+  0% { background-color: #1a949c; }
+  20% { background-color: #57c578; }
+  40% { background-color: #5498b3; }
+  60% { background-color: #9ace56; }
+  80% { background-color: #c5436a; }
+  100% { background-color: #1a949c; }
+}
+
+/* Footer box */
+.footer-box {
+  bottom: 2%;
+}
+
+/* Mobile adjustments */
+@media (max-width: 500px) {
+  .middleImage {
+    width: 50px;
+    height: 50px;
+  }
+
+  .middleImage img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .middleImageBlock {
+    top: 170px;
+  }
+
+  .fiverr-description {
+    top: 3vh;
+  }
+
+  .fiverr-description p {
     font-size: 12px;
-   }
+  }
 
-   .FiverrBTN
-   {
-    width:25px;
-    height:25px;
-    padding:0;
-    margin:0;
-   }
-   .FiverrBTN > img
-   {
-    width:15px;
-    height:15px;
-   }
-   .FiverrBTN:hover > a
-   {
-         left:20px;
-   }
-   .FT
-   {
-    display:none;
-   }
-   .middleImageBlock
-   {
-    top:170px;
-   }
-   .middleImage
-   {
-    height:50px;
-    width:50px;
-   }
-   .middleImage > img
-   {
-    width:50px;
-    height:50px;
-    object-fit: cover;
-    object-position: center;
-    transform-origin: center;
-   }
+  .descrip {
+    top: 7vh;
+    height: 20vh;
+  }
 
-   .address-txt, .phone-txt, .email-txt
-   {
-    font-size:9px;
-   }
- 
-    
+  .descrip p:first-of-type {
+    font-size: 12px;
+  }
 
+  .FiverrBTN {
+    width: 25px;
+    height: 25px;
+  }
 
+  .FiverrBTN img {
+    width: 15px;
+  }
+
+  .FiverrBTN:hover {
+    width: 60px;
+  }
+
+  .FiverrBTN:hover a {
+    left: 25px;
+    font-size: 11px;
+  }
+
+  .address-txt, .phone-txt, .email-txt {
+    font-size: 9px;
+  }
+
+  .FT {
+    display: none;
+  }
 }
-

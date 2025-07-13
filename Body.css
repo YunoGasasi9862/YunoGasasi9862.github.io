@@ -1,364 +1,247 @@
-body{
-    margin:0;
-    font-family: Combo;
-    box-sizing: border-box;
-    background-color: rgb(231, 230, 230);
-    overflow-x: hidden;
-    overflow-y: hidden;
+body {
+  margin: 0;
+  font-family: 'Combo', cursive;
+  box-sizing: border-box;
+  background-color: rgb(231, 230, 230);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: #fff;
 }
-/* width */
+
+/* Scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #888, #555);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #666, #333);
+}
+
+/* Wrapper */
+.wrapper {
+  position: sticky;
+  top: 0;
+  background: url("/beautiful-milky-way-night-sky.jpg") center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+/* Background details */
+.backgroundetails {
+  position: relative;
+  top: 12vh;
+  height: 38vh;
+  background-color: rgba(33, 45, 71, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: popup 2s ease-out;
+  border-radius: 10px;
+  padding: 0 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Left side */
+.description-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top {
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 8px;
+  animation: size-up 1.5s ease-out;
+}
+
+/* Profile image */
+.profile-image, .pp {
+  width: 280px;
+  height: 38vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pp {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Below text */
+.below {
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.below p {
+  margin: 10px 0;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+  opacity: 0;
+  animation: opac 3s ease forwards;
+}
+
+/* Button */
+.button {
+  margin-top: 18px;
+  padding: 12px 18px;
+  background: linear-gradient(to right, #66df41, #3ad10c);
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.symbol {
+  margin-right: 12px;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #88f566, #8df16e);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+}
+
+.button:active {
+  background: black;
+  box-shadow: none;
+}
+
+/* Social bar */
+.socialbar {
+  display: flex;
+  justify-content: space-around;
+  width: 260px;
+  margin-top: 12px;
+}
+
+.github-con, .fiverr-con, .linkedln-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+  transition: width 0.6s ease, background 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.linkedln-con {
+  background-color: #1877b5;
+}
+.github-con, .fiverr-con {
+  background: #fff;
+}
+
+.linkedln-btn, .github-btn, .fiverr-btn {
+  width: 18px;
+  height: auto;
+  cursor: pointer;
+}
+
+.github-btn {
+  width: 22px;
+}
+
+.linkedln-txt, .github-txt, .fiverr-txt {
+  position: absolute;
+  left: 40px;
+  white-space: nowrap;
+  opacity: 0;
+  font-size: 12px;
+  font-weight: bold;
+  transition: opacity 0.8s ease;
+}
+
+.linkedln-con:hover, .github-con:hover, .fiverr-con:hover {
+  width: 100px;
+}
+
+.linkedln-con:hover .linkedln-txt,
+.github-con:hover .github-txt,
+.fiverr-con:hover .fiverr-txt {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes opac {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popup {
+  from { opacity: 0; top: 50vh; }
+  to { opacity: 1; top: 12vh; }
+}
+
+@keyframes size-up {
+  from { font-size: 0; opacity: 0; }
+  to { font-size: 26px; opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 799px) {
+  .backgroundetails {
+    flex-direction: column;
+    top: 3vh;
+    height: auto;
+    background: rgba(33, 45, 71, 0.85);
+    animation: none;
+    border-radius: 8px;
   }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+
+  .profile-image, .pp {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 10px;
   }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
+
+  .button {
+    display: none;
   }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+
+  .below {
+    max-height: 100px;
+    overflow-y: auto;
+    box-shadow: inset 0 4px 6px rgba(0,0,0,0.2);
+    margin-top: 10px;
   }
-.wrapper
-{
-    position: sticky;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background-image: url("/beautiful-milky-way-night-sky.jpg");
-    background-size: cover;
-    width:100%;
-    height:100%;
+
+  .socialbar {
+    width: 180px;
+  }
 }
 
+@media (max-width: 500px) {
+  .backgroundetails {
+    top: 0;
+    background: rgba(33, 45, 71, 0.8);
+  }
 
+  .profile-image {
+    top: auto;
+  }
 
+  .below {
+    max-height: 90px;
+  }
 
-.backgroundetails
-{
-    width:100%;
-    background-color: rgb(33, 45, 71);
-
-    position: relative;
-    height:38vh;
-    top:12vh;
-    animation-name:popup;
-    animation-duration: 3s;
-    display:flex;
-    justify-content: space-between;
-    
+  .description-left {
+    height: auto;
+  }
 }
-.description-left
-{
-
-    display:flex;
-    flex-direction: column; 
-    align-items: center;
-}
-.top 
-{
-    color:rgb(255, 255, 255);
-    font-weight: 700;
-    font-size: 25px;
-    padding-top:10px;
-    animation-name:size-up;
-    animation-duration:2s;
-    animation-timing-function: ease-out;
-    margin-bottom:10px;
-   
-    
-}
-.profile-image
-{
-    width:300px;
-    display:relative;
-}
-.pp
-{
-    width:300px;
-    height:38vh;
-    object-position: center;
-    object-fit: cover;
-    position:relative;
-  
-     
-}
-.below{
-    height:150px;
-}
-.below p
-{
-   position: relative;
-   padding-right: 20px;
-   padding-left:20px;
-   color:rgb(255, 255, 255);
-   flex-wrap: wrap;
-   font-size: 16px;
-   line-height: 1.5;
-   opacity: 0;
-   animation-name:opac;
-   animation-duration: 4s;
-   animation-fill-mode: both;
-}
-.button
-{
-    
-    border: none;
-    width: 120px;
-    display:flex;
-    margin-top: 20px;
-    align-items: center;
-    padding:14px;
-    background-image: linear-gradient(to right, #66df41 0%, #60b94e 50%, #3ad10c 100%);
-    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-    transition: color .3s, background-color .3s, box-shadow .3s;
-}
-
-.symbol
-{
-    margin-right:20px;
-}
-
-.button:hover
-{
-    color: white;
-    background-image: linear-gradient(to right, #88f566 0%, #57ec39 50%, #8df16e 100%);
-    box-shadow: 0 0 20px rgba(255, 255, 255, .5);
-    cursor:pointer;
-
-}
-
-.button:active
-{
-    color:white;
-    background-color: black;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
-}
-.socialbar
-{
-    width:270px;
-    margin-top:10px;
-    z-index:100;
-    position: relative;
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    
-}
-
-.github-con, .fiverr-con, .linkedln-con
-{
-  position:relative;
-  width:30px;
-  height:30px;
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   border-radius: 20px;
-   transition: padding 1s ;
-}
-.linkedln-con
-{
-    background-color: rgb(24, 95, 177);
-
-}
-
-.fiverr-con, .github-con{
-    background-color: white;
-}
-
-
-.linkedln-btn, .fiverr-btn, .github-btn
-{
-    height:15px;
-    z-index: 100;
-    object-fit: cover;
-    object-position: center;
-    cursor: pointer;
-    justify-content: space-between;
-
-   
-
-}
-.linkedln-txt, .github-txt, .fiverr-txt
-{
-    position: absolute;
-    opacity:0;
-    color:  rgb(231, 230, 230);
-    transition: opacity 3s;
-     vertical-align: middle;
-
-}
-.linkedln-con:hover, .github-con:hover, .fiverr-con:hover
-{
-    padding-right:50px;
-
-}
-.linkedln-con:hover > .linkedln-txt{
-
-    
-     animation-name: opac;
-     animation-duration: 4s;
-    left:30px;
-    font-size:12px;
-    color:white;
-    font-weight: bold;
-    cursor:pointer;
-   
-}
-
-.github-con:hover > .github-txt
-{
-    
-    animation-name: opac;
-     animation-duration: 2s;
-    left:40px;
-    font-size:12px;
-    color:black;
-    font-weight: bold;
-    cursor:pointer;
-}
-.fiverr-con:hover> .fiverr-txt
-{
-    animation-name: opac;
-    animation-duration: 2s;
-    left:30px;
-    font-size:12px;
-    color:black;
-    font-weight: bold;
-    cursor:pointer;
-}
-.github-btn
-{
-    height:25px;
-}
-
-@keyframes opac
-{
-    from
-    {
-        opacity:0;
-    }
-    to 
-    {
-        opacity:1;
-    }
-}
-
-
-@keyframes popup
-{
-    from{
-        opacity:0;
-        top:50vh;
-    }
-
-    to 
-    {
-        opacity:1;
-        top:12vh;
-    }
-}
-@keyframes size-up
-{
-    from
-    {
-        font-size: 0px;
-    }
-
-}
-
-
-@media (min-width:0px) and (max-width:799px)
-{
-    .backgroundetails
-    {
-        position: relative;
-        flex-direction: column;
-        justify-content:center;
-        align-items:center;
-        height:12vh;
-        top:3vh;
-        animation: none;
-        background-color: #ffffff00;
-    }
-
-    
-
-    .pp, .profile-image{
-        width:150px;
-        height:150px;
-    }
-    .socialbar{
-     
-        width:150px;
-
-        }
-    .profile-image
-    {
-        position: absolute;
-        top: 19vh;
-    }
-
-    .button
-    {
-        display:none;
-    }
-    .below{
-        height:17vh;
-        overflow-y: scroll;
-        box-shadow: 0 8px 10px rgba(19, 19, 19, 0.2);
-
-    }
-    
-    
-   
-}
-
-@media screen and (max-width:500px) {
-
-    .backgroundetails
-    {
-        position: relative;
-        flex-direction: column;
-        justify-content:center;
-        align-items:center;
-        top:0vh;
-        animation: none;
-        background-color: #ffffff00;
-    }
-
-    .description-left
-    {
-         height:19vh;
-    }
-    
-
-   
-    .profile-image
-    {
-        position: absolute;
-        top: 20vh;
-    }
-
-    .button
-    {
-        display:none;
-    }
-    .below{
-        height:18vh;
-        overflow-y: scroll;
-        box-shadow: 0 8px 10px rgba(19, 19, 19, 0.2);
-
-    }
-
-    
-}
-
